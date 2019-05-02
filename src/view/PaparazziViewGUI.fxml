@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="borderPane" maxHeight="600.0" maxWidth="800.0" minHeight="600.0" minWidth="800.0" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.202" xmlns:fx="http://javafx.com/fxml/1">
+
+	<top>
+		<VBox alignment="CENTER" prefHeight="80.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+			<children>
+				<Label alignment="CENTER" text="Paparazzi Problem Solver" textAlignment="CENTER">
+					<font>
+						<Font size="24.0" />
+					</font>
+				</Label>
+				<Label fx:id="idLabelMapType" maxHeight="0.0" maxWidth="0.0" minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="0.0" style="-fx-font-weight: bold;" text="" visible="false">
+					<font>
+						<Font size="22.0" />
+					</font>
+				</Label>
+				<HBox prefHeight="100.0" prefWidth="200.0">
+					<children>
+						<Label fx:id="idLabelMapSize" prefHeight="25.0" prefWidth="80.0" style="-fx-font-weight: bold;" text="Map Size:">
+							<font>
+								<Font size="16.0" />
+							</font>
+						</Label>
+						<ComboBox fx:id="idComboDataSet" onAction="#onItemSelected" prefWidth="125.0">
+							<HBox.margin>
+								<Insets right="10.0" />
+							</HBox.margin>
+						</ComboBox>
+						<Button fx:id="idButtonAStar" mnemonicParsing="false" onMouseClicked="#onClickedAStar" prefHeight="0.0" prefWidth="100.0" text="A*">
+							<HBox.margin>
+								<Insets right="5.0" />
+							</HBox.margin>
+						</Button>
+						<Button fx:id="idButtonDijkstra" mnemonicParsing="false" onMouseClicked="#onClickedDijkstra" prefHeight="0.0" prefWidth="100.0" text="Dijkstra">
+							<HBox.margin>
+								<Insets right="5.0" />
+							</HBox.margin>
+						</Button>
+						<Button fx:id="idButtonBellmanFord" mnemonicParsing="false" onMouseClicked="#onClickedBellmanFord" prefHeight="0.0" prefWidth="100.0" text="Bellman Ford">
+							<HBox.margin>
+								<Insets right="5.0" />
+							</HBox.margin>
+						</Button>
+						<Button fx:id="idButtonBestFirst" mnemonicParsing="false" onMouseClicked="#onClickedBestFirst" prefHeight="0.0" prefWidth="100.0" text="Best First">
+							<HBox.margin>
+								<Insets right="5.0" />
+							</HBox.margin>
+						</Button>
+						<Button fx:id="idButtonFloydWarshall" mnemonicParsing="false" onMouseClicked="#onClickedFloydWarshall" prefHeight="0.0" prefWidth="100.0" text="Floyd Warshall">
+							<HBox.margin>
+								<Insets right="5.0" />
+							</HBox.margin>
+						</Button>
+						<Button fx:id="idButtonReset" mnemonicParsing="false" onMouseClicked="#onClickedReset" prefHeight="0.0" prefWidth="100.0" text="Reset">
+							<HBox.margin>
+								<Insets right="5.0" />
+							</HBox.margin>
+						</Button>
+					</children>
+					<VBox.margin>
+						<Insets top="5.0" />
+					</VBox.margin>
+				</HBox>
+			</children>
+		</VBox>
+	</top>
+
+	<right>
+		<VBox alignment="CENTER" prefHeight="346.0" prefWidth="280.0" spacing="5.0" BorderPane.alignment="CENTER">
+			<children>
+				<Label style="-fx-font-weight: bold;" text="Explanation">
+					<font>
+						<Font size="22.0" />
+					</font>
+				</Label>
+				<HBox prefHeight="33.0" prefWidth="180.0" spacing="5.0">
+					<children>
+						<Label fx:id="idLabelColorStartCell" text="     ">
+							<font>
+								<Font size="18.0" />
+							</font>
+						</Label>
+						<Label style="-fx-font-style: italic;" text="Gate">
+							<font>
+								<Font size="18.0" />
+							</font>
+						</Label>
+					</children>
+					<VBox.margin>
+						<Insets left="10.0" />
+					</VBox.margin>
+				</HBox>
+				<HBox prefHeight="33.0" prefWidth="180.0" spacing="5.0">
+					<children>
+						<Label fx:id="idLabelColorEndCell" text="     ">
+							<font>
+								<Font size="18.0" />
+							</font>
+						</Label>
+						<Label style="-fx-font-style: italic;" text="Celebrity">
+							<font>
+								<Font size="18.0" />
+							</font>
+						</Label>
+					</children>
+					<VBox.margin>
+						<Insets left="10.0" />
+					</VBox.margin>
+				</HBox>
+				<HBox prefHeight="33.0" prefWidth="180.0" spacing="5.0">
+					<children>
+						<Label fx:id="idLabelColorPond" text="     ">
+							<font>
+								<Font size="18.0" />
+							</font>
+						</Label>
+						<Label style="-fx-font-style: italic;" text="Ponds">
+							<font>
+								<Font size="18.0" />
+							</font>
+						</Label>
+					</children>
+					<VBox.margin>
+						<Insets left="10.0" />
+					</VBox.margin>
+				</HBox>
+				<HBox prefHeight="33.0" prefWidth="180.0" spacing="5.0">
+					<children>
+						<Label fx:id="idLabelColorWall" text="     ">
+							<font>
+								<Font size="18.0" />
+							</font>
+						</Label>
+						<Label style="-fx-font-style: italic;" text="Trees">
+							<font>
+								<Font size="18.0" />
+							</font>
+						</Label>
+					</children>
+					<VBox.margin>
+						<Insets left="10.0" />
+					</VBox.margin>
+				</HBox>
+				<HBox prefHeight="33.0" prefWidth="180.0" spacing="5.0">
+					<children>
+						<Label fx:id="idLabelColorCamera" text="     ">
+							<font>
+								<Font size="18.0" />
+							</font>
+						</Label>
+						<Label style="-fx-font-style: italic;" text="Cameras">
+							<font>
+								<Font size="18.0" />
+							</font>
+						</Label>
+					</children>
+					<VBox.margin>
+						<Insets left="10.0" />
+					</VBox.margin>
+				</HBox>
+				<HBox prefHeight="33.0" prefWidth="180.0" spacing="5.0">
+					<children>
+						<Label fx:id="idLabelColorCameraRadius" text="     ">
+							<font>
+								<Font size="18.0" />
+							</font>
+						</Label>
+						<Label style="-fx-font-style: italic;" text="Camera Radius">
+							<font>
+								<Font size="18.0" />
+							</font>
+						</Label>
+					</children>
+					<VBox.margin>
+						<Insets left="10.0" />
+					</VBox.margin>
+				</HBox>
+				<HBox prefHeight="33.0" prefWidth="180.0" spacing="5.0">
+					<children>
+						<Label fx:id="idLabelColorPath" text="     ">
+							<font>
+								<Font size="18.0" />
+							</font>
+						</Label>
+						<Label style="-fx-font-style: italic;" text="Path">
+							<font>
+								<Font size="18.0" />
+							</font>
+						</Label>
+					</children>
+					<VBox.margin>
+						<Insets left="10.0" />
+					</VBox.margin>
+				</HBox>
+				<HBox prefHeight="33.0" prefWidth="180.0" spacing="5.0">
+					<children>
+						<Label fx:id="idLabelColorNextCell" text="     ">
+							<font>
+								<Font size="18.0" />
+							</font>
+						</Label>
+						<Label style="-fx-font-style: italic;" text="Next Visited Node">
+							<font>
+								<Font size="18.0" />
+							</font>
+						</Label>
+					</children>
+					<VBox.margin>
+						<Insets left="10.0" />
+					</VBox.margin>
+				</HBox>
+				<Label style="-fx-font-weight: bold;" text="Results">
+					<font>
+						<Font size="22.0" />
+					</font>
+				</Label>
+				<VBox prefHeight="74.0" prefWidth="200.0">
+					<children>
+						<Label fx:id="idLabelResultExecutionTime" text="Execution Time:">
+							<font>
+								<Font size="18.0" />
+							</font>
+						</Label>
+						<Label fx:id="idLabelResultCosts" text="Total Costs:">
+							<font>
+								<Font size="18.0" />
+							</font>
+						</Label>
+						<Label fx:id="idLabelResultNodes" text="Traversed Nodes:">
+							<font>
+								<Font size="18.0" />
+							</font>
+						</Label>
+						<Label fx:id="idLabelResultShortestPath" text="Shortest Path:">
+							<font>
+								<Font size="18.0" />
+							</font>
+						</Label>
+					</children>
+					<VBox.margin>
+						<Insets left="10.0" />
+					</VBox.margin>
+				</VBox>
+			</children>
+		</VBox>
+	</right>
+	<center>
+		<AnchorPane fx:id="anchorPane" style="-fx-background-color: black;" BorderPane.alignment="CENTER" />
+	</center>
+</BorderPane>

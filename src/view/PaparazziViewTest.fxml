@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="borderPane" maxHeight="600.0"
+	maxWidth="800.0" minHeight="600.0" minWidth="800.0" prefHeight="600.0"
+	prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.202"
+	xmlns:fx="http://javafx.com/fxml/1">
+
+	<top>
+		<VBox alignment="CENTER" prefHeight="80.0" prefWidth="800.0"
+			BorderPane.alignment="CENTER">
+			<children>
+				<Label alignment="CENTER" text="Paparazzi Map"
+					textAlignment="CENTER">
+					<font>
+						<Font size="24.0" />
+					</font>
+				</Label>
+				<HBox prefHeight="100.0" prefWidth="200.0">
+					<children>
+						<VBox prefHeight="45.0" prefWidth="575.00">
+							<children>
+								<Label fx:id="idLabelDataSet"
+									style="-fx-font-weight: bold;" text="">
+									<font>
+										<Font size="16.0" />
+									</font>
+								</Label>
+							</children>
+						</VBox>
+						<VBox prefHeight="200.0" prefWidth="225.00">
+							<children>
+								<Label fx:id="idLabelMapType"
+									style="-fx-font-weight: bold;" text="">
+									<font>
+										<Font size="22.0" />
+									</font>
+								</Label>
+							</children>
+						</VBox>
+					</children>
+				</HBox>
+			</children>
+		</VBox>
+	</top>
+	<right>
+		<VBox alignment="CENTER" prefHeight="346.0" prefWidth="280.0"
+			spacing="5.0" BorderPane.alignment="CENTER">
+			<children>
+				<Label text="Explanation" style="-fx-font-weight: bold;">
+					<font>
+						<Font size="22.0" />
+					</font>
+				</Label>
+				<HBox prefHeight="33.0" prefWidth="180.0" spacing="5.0">
+					<children>
+						<Label fx:id="idLabelColorStartCell" text="     ">
+							<font>
+								<Font size="18.0" />
+							</font>
+						</Label>
+						<Label text="Gate" style="-fx-font-style: italic;">
+							<font>
+								<Font size="18.0" />
+							</font>
+						</Label>
+					</children>
+					<VBox.margin>
+						<Insets left="10.0" />
+					</VBox.margin>
+				</HBox>
+				<HBox prefHeight="33.0" prefWidth="180.0" spacing="5.0">
+					<children>
+						<Label fx:id="idLabelColorEndCell" text="     ">
+							<font>
+								<Font size="18.0" />
+							</font>
+						</Label>
+						<Label text="Celebrity" style="-fx-font-style: italic;">
+							<font>
+								<Font size="18.0" />
+							</font>
+						</Label>
+					</children>
+					<VBox.margin>
+						<Insets left="10.0" />
+					</VBox.margin>
+				</HBox>
+				<HBox prefHeight="33.0" prefWidth="180.0" spacing="5.0">
+					<children>
+						<Label fx:id="idLabelColorPond" text="     ">
+							<font>
+								<Font size="18.0" />
+							</font>
+						</Label>
+						<Label text="Ponds" style="-fx-font-style: italic;">
+							<font>
+								<Font size="18.0" />
+							</font>
+						</Label>
+					</children>
+					<VBox.margin>
+						<Insets left="10.0" />
+					</VBox.margin>
+				</HBox>
+				<HBox prefHeight="33.0" prefWidth="180.0" spacing="5.0">
+					<children>
+						<Label fx:id="idLabelColorWall" text="     ">
+							<font>
+								<Font size="18.0" />
+							</font>
+						</Label>
+						<Label text="Trees" style="-fx-font-style: italic;">
+							<font>
+								<Font size="18.0" />
+							</font>
+						</Label>
+					</children>
+					<VBox.margin>
+						<Insets left="10.0" />
+					</VBox.margin>
+				</HBox>
+				<HBox prefHeight="33.0" prefWidth="180.0" spacing="5.0">
+					<children>
+						<Label fx:id="idLabelColorCamera" text="     ">
+							<font>
+								<Font size="18.0" />
+							</font>
+						</Label>
+						<Label text="Cameras" style="-fx-font-style: italic;">
+							<font>
+								<Font size="18.0" />
+							</font>
+						</Label>
+					</children>
+					<VBox.margin>
+						<Insets left="10.0" />
+					</VBox.margin>
+				</HBox>
+				<HBox prefHeight="33.0" prefWidth="180.0" spacing="5.0">
+					<children>
+						<Label fx:id="idLabelColorPath" text="     ">
+							<font>
+								<Font size="18.0" />
+							</font>
+						</Label>
+						<Label text="Path" style="-fx-font-style: italic;">
+							<font>
+								<Font size="18.0" />
+							</font>
+						</Label>
+					</children>
+					<VBox.margin>
+						<Insets left="10.0" />
+					</VBox.margin>
+				</HBox>
+				<Label text="Results" style="-fx-font-weight: bold;">
+					<font>
+						<Font size="22.0" />
+					</font>
+				</Label>
+				<VBox prefHeight="74.0" prefWidth="200.0">
+					<children>
+						<Label fx:id="idLabelResultExecutionTime"
+							text="Execution Time:">
+							<font>
+								<Font size="18.0" />
+							</font>
+						</Label>
+						<Label fx:id="idLabelResultCosts" text="Total Costs:">
+							<font>
+								<Font size="18.0" />
+							</font>
+						</Label>
+						<Label fx:id="idLabelResultNodes" text="Traversed Nodes:">
+							<font>
+								<Font size="18.0" />
+							</font>
+						</Label>
+						<Label fx:id="idLabelResultShortestPath"
+							text="Shortest Path:">
+							<font>
+								<Font size="18.0" />
+							</font>
+						</Label>
+					</children>
+					<VBox.margin>
+						<Insets left="10.0" />
+					</VBox.margin>
+				</VBox>
+			</children>
+		</VBox>
+	</right>
+	<center>
+		<AnchorPane fx:id="anchorPane"
+			style="-fx-background-color: black;" BorderPane.alignment="CENTER" />
+	</center>
+</BorderPane>

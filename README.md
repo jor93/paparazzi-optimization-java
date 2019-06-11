@@ -61,7 +61,7 @@ The demo mode aims to better understand each search algorithm and to visually sh
 
 **Test mode**
 
-The test mode aims to find the best search algorithm for every data set. In order to do this, the project generates n Number of Maps for the five different pre-definied data sets (TINY, SMALL, MEDIUM, LARGE). Afterwards every algorithm is started on the specific test run and writes the result in the corresponding folder under results. After each data set, the overall result file is created and updated. The algorithms are compared by following metrics:
+The test mode aims to find the best search algorithm for every data set. In order to do this, the project generates n Number of Maps for the four different pre-definied data sets (TINY, SMALL, MEDIUM, LARGE). Afterwards every algorithm is started on the specific test run and writes the result in the corresponding folder under results. After each data set, the overall result file is created and updated. The algorithms are compared by following metrics:
   - **Execution time in ms.** *Describes how long the algorithm took to find a path from the start point to the end point.*
   - **Visited Nodes.** *Describes how many nodes have been visited by the algorithm to find a path.*
   - **Total Costs.** *Describes how high the total path costs are from the start point to the end point.*
